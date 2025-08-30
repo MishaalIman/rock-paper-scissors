@@ -22,7 +22,8 @@ body {
 }
 
 .container {
-    padding: 4rem 6rem;
+    /* padding: 2rem 4rem; */
+    padding: 2rem 4rem 4rem 4rem;
     margin: 1rem;
     border-radius: 14px;
     background: rgba(255, 255, 255, 0.05);
@@ -62,45 +63,7 @@ body {
 }
 
 .heading {
-    margin-bottom: 50%;
-}
-
-.R {
-    color: #ff00bf;
-    margin-bottom: -3.7vh;
-    transform: rotate(5deg);
-}
-
-.P {
-    color: #0044ff;
-    margin-bottom: -3.5vh;
-    transform: rotate(-2deg);
-}
-
-.S {
-    color: #FFD700;
-}
-
-.heading-part, .paper {
-    display: flex;
-}
-
-.rock, .paper img, .scissors {
-    width: 40px;
-    height: 40px;
-    margin-bottom: -3.5vh;
-}
-
-.rock {
-    transform: rotate(15deg);
-}
-
-.scissors {
-    transform: rotate(-110deg);
-}
-
-.paper img {
-    transform: rotate(-20deg);
+    margin-bottom: 15%;
 }
 
 button {
@@ -125,8 +88,8 @@ button {
 }
 
 .play {    
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     background-color: #6711d8;
     padding: 10px 10px;
@@ -139,8 +102,8 @@ button {
 }
 
 .resume {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     padding: 10px 10px;
     background-color: #ff00bf;

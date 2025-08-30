@@ -104,6 +104,7 @@ body {
 .result_images {
     display: flex;
     column-gap: 7rem;
+    margin-top: 1.5rem;
 }
 
 .container.start .user_result {
