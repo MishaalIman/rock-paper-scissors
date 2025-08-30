@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-image: url('images/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    padding: 4rem 6rem;
+    margin: 1rem;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px) saturate(110%);
+    -webkit-backdrop-filter: blur(5px) saturate(110%);
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    box-shadow: 
+        inset 1px 1px 4px rgba(255, 255, 255, 0.9),
+        inset -2px -2px 8px rgba(0, 0, 0, 0.25),
+        0 10px 25px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: -30%;
+    left: -30%;
+    width: 160%;
+    height: 160%;
+    background: radial-gradient(
+        circle at top left,
+        rgba(255, 255, 255, 0.3),
+        transparent 0%
+    );
+    transform: rotate(25deg);
+}
+
+.container p {
+    font-size: 3rem;
+    text-shadow: 3px 3px 0px #000;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+.heading {
+    margin-bottom: 50%;
+}
+
+.R {
+    color: #ff00bf;
+    margin-bottom: -3.7vh;
+    transform: rotate(5deg);
+}
+
+.P {
+    color: #0044ff;
+    margin-bottom: -3.5vh;
+    transform: rotate(-2deg);
+}
+
+.S {
+    color: #FFD700;
+}
+
+.heading-part, .paper {
+    display: flex;
+}
+
+.rock, .paper img, .scissors {
+    width: 40px;
+    height: 40px;
+    margin-bottom: -3.5vh;
+}
+
+.rock {
+    transform: rotate(15deg);
+}
+
+.scissors {
+    transform: rotate(-110deg);
+}
+
+.paper img {
+    transform: rotate(-20deg);
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;    
+    font-size: larger;
+    color: white;
+    backdrop-filter: blur(5px) saturate(110%);
+    -webkit-backdrop-filter: blur(5px) saturate(110%);
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    box-shadow: 
+        inset 1px 1px 4px rgba(255, 255, 255, 0.9),
+        inset -2px -2px 8px rgba(0, 0, 0, 0.25),
+        0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.circle-buttons {
+    display: flex;
+    gap: 3rem;
+}
+
+.play {    
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #6711d8;
+    padding: 10px 10px;
+    transition: transform 0.1s ease, background-color 0.1s ease;
+}
+
+.play:active {
+    transform: scale(0.9);
+    background-color: #470b96;
+}
+
+.resume {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    padding: 10px 10px;
+    background-color: #ff00bf;
+    transition: transform 0.1s ease, background-color 0.1s ease;
+}
+
+.resume:active {
+    transform: scale(0.9);
+    background-color: #b50d8b;
+}
+
+.resume img {
+    color: white;
+}

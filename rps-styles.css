@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-image: url('images/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.return {
+    position: absolute;
+    top: 1.05vh;
+    left: 1.04vw;
+    cursor: pointer;
+    font-size: larger;
+    color: white;
+    backdrop-filter: blur(5px) saturate(110%);
+    -webkit-backdrop-filter: blur(5px) saturate(110%);
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    box-shadow: 
+        inset 1px 1px 4px rgba(255, 255, 255, 0.9),
+        inset -2px -2px 8px rgba(0, 0, 0, 0.25),
+        0 10px 25px rgba(0, 0, 0, 0.4);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    padding: 10px 10px;
+    background-color: #2b00ff;
+    transition: transform 0.1s ease, background-color 0.1s ease;    
+}
+
+.return:active {
+    transform: scale(0.9);
+    background-color: #1a00b3;
+}
+
+.container {
+    padding: 2rem 6rem;
+    margin: 1rem;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px) saturate(110%);
+    -webkit-backdrop-filter: blur(5px) saturate(110%);
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    box-shadow: 
+        inset 1px 1px 4px rgba(255, 255, 255, 0.9),
+        inset -2px -2px 8px rgba(0, 0, 0, 0.25),
+        0 10px 25px rgba(0, 0, 0, 0.4);      
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: -30%;
+    left: -30%;
+    width: 160%;
+    height: 160%;
+    background: radial-gradient(
+        circle at top left,
+        rgba(255, 255, 255, 0.3),
+        transparent 0%
+    );
+    transform: rotate(25deg);
+}
+
+.scoreboard {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    text-align:center;
+    color: white;
+    font-size: 1.235rem;
+    margin-bottom: 0.93vh;
+    padding: 0.5rem 4rem;  
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px) saturate(110%);
+    -webkit-backdrop-filter: blur(5px) saturate(110%);
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    box-shadow: 
+        inset 1px 1px 4px rgba(255, 255, 255, 0.9),
+        inset -2px -2px 8px rgba(0, 0, 0, 0.25),
+        0 10px 25px rgba(0, 0, 0, 0.4); 
+}
+
+.result_images {
+    display: flex;
+    column-gap: 7rem;
+}
+
+.container.start .user_result {
+    transform-origin: left;
+    animation: userShake 0.7s ease infinite;
+}
+
+@keyframes userShake {
+    50% {
+        transform: rotate(10deg);
+    }
+}
+
+.container.start .computer_result {
+    transform-origin: right;
+    animation: computerShake 0.7s ease infinite;
+}
+
+@keyframes computerShake {
+    50% {
+        transform: rotate(-10deg);
+    }
+}
+
+.result_images img {
+    width: 100px;
+}
+
+.user_result img {
+    transform: rotate(90deg);
+}
+
+.computer_result img {
+    transform: rotate(-90deg) rotateY(180deg);
+}
+
+.result {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    margin-top: 1.5rem;
+}
+
+.option_images {
+    display: flex;
+    align-items: center;
+    margin-top: 2.5rem;
+    gap: 2.5rem;
+}
+
+.container.start .option_images {
+    pointer-events: none;
+}
+
+.option_images img {
+    width: 50px;
+}
+
+.option_image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.option_image:hover {
+    opacity: 1;
+}
+
+.option_image.active {
+    opacity: 1;
+}
+
+.option_image img {
+    pointer-events: none;
+}
+
+.option_image p {
+    color: white;
+    font-size: 1.235rem;
+    margin-top: 1rem;
+    pointer-events: none;
+}
